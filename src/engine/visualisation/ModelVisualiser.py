@@ -1,5 +1,5 @@
 from __future__ import division
-import pickle
+import dill as pickle
 from collections import defaultdict
 
 import datetime
