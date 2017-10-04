@@ -24,6 +24,7 @@ The API currently has the following functionality:
 * Gensim (https://radimrehurek.com/gensim/install.html)
 * Stanford CoreNLP Server (https://stanfordnlp.github.io/CoreNLP/corenlp-server.html)
 + Mailgun API (Optional - send notification email upon training completion)
+
 See the requirements.txt file for the library versions.
 
 ### Registration
