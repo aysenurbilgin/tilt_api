@@ -25,7 +25,7 @@ The API currently has the following functionality:
 * Stanford CoreNLP Server (https://stanfordnlp.github.io/CoreNLP/corenlp-server.html)
 + Mailgun API (Optional - send notification email upon training completion)
 
-See the requirements.txt file for the library versions.
+See the [requirements.txt](requirements.txt) file for the library versions.
 
 ### Registration
 In order to receive  Mailgun API, you will need to sign up and get your key from https://www.mailgun.com
@@ -35,9 +35,9 @@ In order to receive  Mailgun API, you will need to sign up and get your key from
 The following files need to be configured with your details or choices:
 
 ```
-celery_tasks/celery_app.py
-common/database.py
-models/alerts/constants.py
+src/celery_tasks/celery_app.py
+src/common/database.py
+src/models/alerts/constants.py
 ```
 
 ### API Endpoint Reference
