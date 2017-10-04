@@ -34,7 +34,7 @@ In order to receive  Mailgun API, you will need to sign up and get your key from
 The following files need to be configured with your details or choices:
 
 ```
-celery_tasks/[celery_app.py]celery_app.py
+celery_tasks/celery_app.py
 common/database.py
 models/alerts/constants.py
 ```
@@ -50,45 +50,12 @@ models/alerts/constants.py
 | GET | /api/experiment/<experiment_id> | Get experiment having *experiment_id* | Experiment details (JSON) | - |
 | GET | /api/experiment/run/<experiment_id> | Run experiment having *experiment_id* | Status information (Plain text) | - |
 | GET | /api/experiment/delete/<experiment_id> | Delete experiment having *experiment_id* | Status information (Plain text) | - |
-| POST | /api/experiment/run/ | Run experiment | Status information (Plain text) | ```{ "experimentId" : "<exp_uuid>"}``` |
-| POST | /api/experiments/ | Get experiments created using the *user_email* | User experiments (JSON)  | ```{"userEmail" : "<user_email>"}``` |
-| POST | /api/experiment/new/ | Configure and create experiment | Status information (Plain text) | ``` {
-	"userEmail" : "<user_email>",
-	"form" : [
-		{
-			"experiment_display_title" : "Experiment title",
-			"online_flag" : true,
-			"training_algorithm" : "SGHS"
-		}
-		]
-} ``` |
-| POST | /api/experiment/visualise_semantic_distance/<experiment_id> | Visualise evolution of semantic distance between a keyword and aspects of interest | Components of Bokeh plot to be embedded (JSON) | ``` {
-	"form" : [
-		{
-			"keyword" : "artificial intelligence",
-			"num_neighbours" : 10,
-			"aspect_list[]" : ["military", "jobs", "transport", "efficiency"]
-		}
-		]
-} ``` |
-| POST | /api/experiment/visualise_semantic_tracking/<experiment_id> | Run experiment having *experiment_id* | Components of Bokeh plot to be embedded (JSON) | ``` {
-	"form" : [
-		{
-			"keyword" : "artificial intelligence",
-			"num_neighbours" : 10,
-			"visualisation_alg" : "pca"
-		}
-		]
-} ``` |
-| POST | /api/experiment/visualise_sentiment_analysis/<experiment_id> | Delete experiment having *experiment_id* | Components of Bokeh plot to be embedded (JSON) | ``` {
-	"form" : [
-		{
-			"keyword" : "artificial intelligence",
-			"num_neighbours" : 10,
-			"sentiment_lexicon" : "SO-CAL"
-		}
-		]
-} ``` |
+| POST | /api/experiment/run/ | Run experiment | Status information (Plain text) | ```{ "experimentId" : "a6a47948ef0a438bbb3db96ec9df7696"}``` |
+| POST | /api/experiments/ | Get experiments created using the *user_email* | User experiments (JSON)  | ```{"userEmail" : "user@email.com"}``` |
+| POST | /api/experiment/new/ | Configure and create experiment | Status information (Plain text) | ``` { "userEmail" : "user@email.com", "form" : [ { "experiment_display_title" : "Experiment title", "online_flag" : true, "training_algorithm" : "SGHS" } ] } ``` |
+| POST | /api/experiment/visualise_semantic_distance/<experiment_id> | Visualise evolution of semantic distance between a keyword and aspects of interest | Components of Bokeh plot to be embedded (JSON) | ``` {"form" : [ { "keyword" : "artificial intelligence", "num_neighbours" : 10, "aspect_list[]" : ["military", "jobs", "transport", "efficiency"] } ] } ``` |
+| POST | /api/experiment/visualise_semantic_tracking/<experiment_id> | Run experiment having *experiment_id* | Components of Bokeh plot to be embedded (JSON) | ``` { "form" : [ { "keyword" : "artificial intelligence", "num_neighbours" : 10, "visualisation_alg" : "pca" } ] } ``` |
+| POST | /api/experiment/visualise_sentiment_analysis/<experiment_id> | Delete experiment having *experiment_id* | Components of Bokeh plot to be embedded (JSON) | ``` {"form" : [ { "keyword" : "artificial intelligence", "num_neighbours" : 10, "sentiment_lexicon" : "SO-CAL" } ] } ``` |
 
 ## Limitations
 
