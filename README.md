@@ -28,7 +28,7 @@ The API currently has the following functionality:
 See the [requirements.txt](requirements.txt) file for the library versions.
 
 ### Registration
-In order to receive  Mailgun API, you will need to sign up and get your key from https://www.mailgun.com
+In order to use the Mailgun API and receive emails, you will need to sign up and get your key from https://www.mailgun.com
 
 ### Configure
 
